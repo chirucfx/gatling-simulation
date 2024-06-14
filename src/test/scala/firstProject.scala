@@ -13,7 +13,7 @@ class firstProject extends Simulation
 
   setUp(scn.inject(atOnceUsers(10))).protocols(httpProtocol)
     .assertions(
-      global.responseTime.max.lt(500),  // Max response time should be less than 500 ms
+      global.responseTime.max.lt(100),  // Max response time should be less than 500 ms
       global.successfulRequests.percent.gt(95)  // More than 95% requests should be successful
     )
 }
